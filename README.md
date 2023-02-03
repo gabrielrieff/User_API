@@ -52,7 +52,7 @@ gerar uma chave hash e colar na arquivo .env
 JWT_SECRET=SuaChaveHash (é exencial usar o "JWT_SECRET" como key para a conecção com o banco de dados)
 
 "Tudo pronto para uso."
-"Caso tenha tentar criar um novo usuario no seu banco de dados, pode rxrcutar o seguinte comando no terminal, esse comando ira abrir um gerenciador de banco de dados proprio do prisma.
+"Caso tenha tentar criar um novo usuario no seu banco de dados, pode executar o seguinte comando no terminal, esse comando ira abrir um gerenciador de banco de dados proprio do prisma.
 
   > npx prisma studio ;
 "
