@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "server initial login",
   "main": "index.js",
+  "repository": {"directory": "https://github.com/gabrielrieff/apiNode-User"},
   "scripts": {
     "dev": "tsx watch src/server.ts"
   },

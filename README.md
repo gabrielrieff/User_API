@@ -1,11 +1,60 @@
+# Documentação em construção!!
+
 <h1 style="text-align:center; color: green; font-weight: 700"> Api node express </h1>
 
 Inicialização da criação de uma api em nodeJs, usando express. Ideia inicial para essa api é criar um sistema de login bem robusto, com algumas rodas de usuário.
 
+<br>
+
 > ## Libs usadas até o momento:
 
-- <a src="https://expressjs.com/en/starter/installing.html">Express</a>
-- <a src="https://www.typescriptlang.org/docs/">Typescript</a>
-- <a src="https://www.prisma.io/docs/getting-started">Prisma.io</a>
-- <a src="https://github.com/auth0/node-jsonwebtoken">JsonWebToken</a>
-- <a src="https://github.com/dcodeIO/bcrypt.js">bcrypt.js</a>
+<br>
+
+1. > [Express](https://expressjs.com/en/starter/installing.html)
+2. > [Typescript](https://www.typescriptlang.org/docs/)
+3. > [Prisma.io](https://www.prisma.io/docs/getting-started)
+4. > [JsonWebToken](https://github.com/auth0/node-jsonwebtoken)
+5. > [bcrypt.js](https://github.com/dcodeIO/bcrypt.js)
+
+<br>
+
+### Modo de uso da api
+
+<br>
+
+```typescript
+Executar os comandos a seguir na ordem descrita!!
+
+  "Importante": "É necessario ter instalado o git e pacote npm!"
+
+escolher um pasta de sua prefencia, abrir no seu promp de comando/cmd
+
+> git clone https://github.com/gabrielrieff/apiNode-User ;
+
+>cd apiNode-User ;
+
+> npm install ;
+
+na raiz do projeto criar um arquivo .env e colar o codigo abaixo ;
+
+"
+  DATABASE_URL="file:./dev.db"
+"
+
+> npx prisma migrate dev;
+
+ao executar esse comando ele ir pedir para nomear sua migrate, pode colocar o nome que achar melho.
+
+Apos estes passos, acessar o o site MD5Hash(https://www.md5hashgenerator.com/)
+gerar uma chave hash e colar na arquivo .env
+
+"Exemplo"
+JWT_SECRET=SuaChaveHash (é exencial usar o "JWT_SECRET" como key para a conecção com o banco de dados)
+
+"Tudo pronto para uso."
+"Caso tenha tentar criar um novo usuario no seu banco de dados, pode rxrcutar o seguinte comando no terminal, esse comando ira abrir um gerenciador de banco de dados proprio do prisma.
+
+  > npx prisma studio ;
+"
+
+```
