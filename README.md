@@ -1,6 +1,6 @@
 # Documentação em construção!!
 
-<h1 style="text-align:center; color: green; font-weight: 700"> Api node express </h1>
+# Api node express
 
 Inicialização da criação de uma api em nodeJs, usando express. Ideia inicial para essa api é criar um sistema de login bem robusto, com algumas rodas de usuário.
 
@@ -22,27 +22,37 @@ Inicialização da criação de uma api em nodeJs, usando express. Ideia inicial
 
 <br>
 
-```typescript
 Executar os comandos a seguir na ordem descrita!!
 
-  "Importante": "É necessario ter instalado o git e pacote npm!"
+## Importante: "É necessario ter instalado o git e pacote npm!"
 
 escolher um pasta de sua prefencia, abrir no seu promp de comando/cmd
 
-> git clone https://github.com/gabrielrieff/apiNode-User ;
+<br>
 
->cd apiNode-User ;
+```typescript
+git clone https://github.com/gabrielrieff/apiNode-User
+```
 
-> npm install ;
+```typescript
+cd apiNode-User
+```
 
-na raiz do projeto criar um arquivo .env e colar o codigo abaixo ;
+```typescript
+npm install
+```
 
-"
-  DATABASE_URL="file:./dev.db"
-"
+na raiz do projeto criar um arquivo .env e colar o codigo abaixo.
 
-> npx prisma migrate dev;
+```typescript
+DATABASE_URL="file:./dev.db"
+```
 
+```typescript
+npx prisma migrate dev;
+```
+
+```
 ao executar esse comando ele ir pedir para nomear sua migrate, pode colocar o nome que achar melho.
 
 Apos estes passos, acessar o o site MD5Hash(https://www.md5hashgenerator.com/)
@@ -52,9 +62,17 @@ gerar uma chave hash e colar na arquivo .env
 JWT_SECRET=SuaChaveHash (é exencial usar o "JWT_SECRET" como key para a conecção com o banco de dados)
 
 "Tudo pronto para uso."
-"Caso tenha tentar criar um novo usuario no seu banco de dados, pode executar o seguinte comando no terminal, esse comando ira abrir um gerenciador de banco de dados proprio do prisma.
-
-  > npx prisma studio ;
-"
-
+Caso tenha tentar criar um novo usuario no seu banco de dados, pode executar o seguinte comando no terminal, esse comando ira abrir um gerenciador de banco de dados proprio do prisma.
 ```
+
+```typescript
+npx prisma studio
+```
+
+### Rotas existentes:
+
+> http://localhost:3333/user
+
+> http://localhost:3333/session
+
+> http://localhost:3333/reset
