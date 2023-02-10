@@ -4,14 +4,14 @@ import { resetPasswordService } from "../../services/user/resetPasswordService";
 class resetPasswordController{
   async handle(req: Request, res: Response){
 
-    const { newPassword } = req.body;
+    const { newPassword, passwordReseteExpired, token } = req.body;
     const user_id = req.user_id;
 
     const ResetPassWord = new resetPasswordService();
 
     const userPassword = await ResetPassWord.execute({
       user_id,
-      newPassword
+      newPassword,
     })
 
     return res.json(userPassword)

@@ -1,9 +1,9 @@
 import { hash } from "bcryptjs";
-import prismaClient from "../../prisma"
+import prismaClient from "../../../prisma"
 
 interface resetPasswordRequest{
   user_id: string;
-  newPassword: string
+  newPassword: string;
 }
 
 class resetPasswordService{
@@ -12,13 +12,13 @@ class resetPasswordService{
     const passwordHash = await hash(newPassword, 8);
 
     try{
-      const userAlreadyExists = await prismaClient.user.findFirst({
+      const user = await prismaClient.user.findFirst({
         where: {
-          id: user_id
+          id: user_id,
         }
       })
 
-      if(!userAlreadyExists){
+      if(user){
         throw new Error("User not exist")
       }
 

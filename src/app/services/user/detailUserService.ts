@@ -1,4 +1,4 @@
-import prismaClient from "../../prisma"
+import prismaClient from "../../../prisma"
 
 class detailUserService{
   async execute(user_id: string){
