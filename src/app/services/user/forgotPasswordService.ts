@@ -35,20 +35,18 @@ class forgotPasswordService{
         }
       });
 
-      // transport.sendMail({
-      //   to: email,
-      //   from: 'gabeerieff@gmail.com',
-      //   template: 'auth/forgot_password' ,
-      //   context: {token},
-      //   subject : 'Email enviado',
-      //   //html: '<p>deu certo</p>'
-      // }, (err) =>{
-      //   if(err){
-      //     throw new Error("Cannot send password email!")
-      //   }
-      // })
+      transport.sendMail({
+        to: email,
+        from: 'gabeerieff@gmail.com',
+        template: 'auth/forgot_password' ,
+        context: {token},
+        subject : 'Email enviado',
+      }, (err) =>{
+        if(err){
+          throw new Error("Cannot send password email!")
+        }
+      })
 
-      console.log(token)
     }catch(erro) {
       throw new Error("Email not exist!")
     }

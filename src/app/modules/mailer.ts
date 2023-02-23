@@ -15,10 +15,10 @@ const handlebarOptions = {
   viewEngine: {
     partialDir: path.resolve('./src/resources/mail/'),
     defaultLayout: false,
-    extName: '.handlebars',  
+    extName: '.html',  
   },
   viewPath: path.resolve('./src/resources/mail/'),
-  extName: '.handlebars',  
+  extName: '.html',  
 }
 
 transport.use('compile', hbs(handlebarOptions))
